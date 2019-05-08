@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap 4 Form Validation</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-2">
+ <div class="container">
+	    <h1 class="text-center text-primary text-uppercase mt-5">Bootstrap 4 Form Validation</h1>
+ </div>
+  <div class="row justify-content-center">
+  	 
+      <div class="col-lg-8 col-md-8">
+	     <div class="card card-body">
+		    <form>
+			    <div class="form-group">
+				    <label>Min Text</label>
+					<input id="mymin" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Max Text</label>
+					<input id="mymax" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Email</label>
+					<input id="myemail" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Required</label>
+					<input id="myrequired" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>URL</label>
+					<input id="myurl" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Integer</label>
+					<input id="myinteger" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Numeric</label>
+					<input id="mynumeric" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Alphanumeric</label>
+					<input id="myanumeric" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Alphabet</label>
+					<input id="myalphabet" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Starts With</label>
+					<input id="mystartwith" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Ends With</label>
+					<input id="myendswith" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Contain</label>
+					<input id="mycontain" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Divisible</label>
+					<input id="mydivisible" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>Regular Expression</label>
+					<input id="myrexpression" class="form-control">
+				</div>
+				<div class="form-group">
+				    <label>ISO8601</label>
+					<input id="myiso8601" class="form-control">
+				</div>
+			</form>
+		 </div>
+	  </div>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
+<!--<script src="bootstrap-validate.js"></script>-->
+<script>
+bootstrapValidate('#mymin', 'min:5:Enter at least 5 characters!')
+bootstrapValidate('#mymax', 'max:10:Please do not enter more than 10 characters!')
+bootstrapValidate('#myemail', 'email:Enter a valid email address!')
+bootstrapValidate('#myrequired', 'required:Please fill out this field!')
+bootstrapValidate('#myurl', 'url:Please enter a valid url!')
+bootstrapValidate('#myinteger', 'integer:Please fill out this field with integer!')
+bootstrapValidate('#mynumeric', 'numeric:Please fill out this field with numeric!')
+bootstrapValidate('#myanumeric', 'alphanumeric:Enter only Alphanumeric characters!')
+bootstrapValidate('#myalphabet', 'alpha:Enter only alphabetic charecters!')
+bootstrapValidate('#mypassword', 'matches:#passwordConfirm:Your passwords should match')
+bootstrapValidate('#mystartwith', 'startsWith:+62:Your phone number need to start with +62')
+bootstrapValidate('#myendswith', 'endsWith:UCV:Your input need to end with UCV')
+bootstrapValidate('#mycontain', 'contains:Deepak:Your text need to contain Deepak')
+bootstrapValidate('#mydivisible', 'divisible:15:number is not divisible by 15')
+bootstrapValidate('#myrexpression', 'regex:^[a-z]+$:Please full fill my regular expression!')
+bootstrapValidate('#myiso8601', 'ISO8601:Your input does not match the wanted format yyyy-mm-dd')
+</script>
+</body>
+</html>
